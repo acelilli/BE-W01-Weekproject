@@ -47,8 +47,6 @@ namespace ImposteApp
         // ritorna un double (imposta)
         public double CalcolaImposta()
         {
-            Console.WriteLine("================ CALCOLO IMPOSTA ============== \n");
-
             switch (RedditoAnnuale)
             {
                 case double reddito when reddito <= 15000:
@@ -79,7 +77,8 @@ namespace ImposteApp
         // Recap Imposta
         // Al riepilogo aggiunge il nuovo dato imposta
         public void RecapImposta() {
-            Console.WriteLine("================ CALCOLO IMPOSTA ============== \n");
+            Console.WriteLine("========================================");
+            Console.WriteLine("\n CALCOLO DELL'IMPOSTA DA VERSARE: \n");
             Riepilogo();
             Console.WriteLine($"IMPOSTA DA VERSARE: \t{Imposta}");
             Console.WriteLine("\n\n");
