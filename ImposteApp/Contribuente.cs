@@ -36,7 +36,7 @@ namespace ImposteApp
         public void Riepilogo()
         {
             Console.WriteLine($"Contribuente:\t\t\t{Nome} {Cognome}");
-            Console.WriteLine($"Nato il:\t{DataNascita} ({Sesso})");
+            Console.WriteLine($"Nato il:\t{DataNascita.ToShortDateString()} ({Sesso})");
             Console.WriteLine($"Residente in:\t{ComuneResidenza}");
             Console.WriteLine($"Codice Fiscale:\t\t{CodiceFiscale}");
             Console.WriteLine($"Reddito dichiarato:\t {RedditoAnnuale}");

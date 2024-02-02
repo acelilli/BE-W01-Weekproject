@@ -61,10 +61,10 @@ namespace ImposteApp
                         codiceFiscale = Console.ReadLine();
                     }
                     //-------------------------------------------------------------------------------
-                    // Sesso + controllo sul sesso con bonus inclusività
-                    Console.WriteLine("\nInserisci sesso (m/f/a):");
+                    // Sesso + controllo sul sesso
+                    Console.WriteLine("\nInserisci sesso (m/f):");
                     char sesso = Console.ReadKey().KeyChar;
-                    if (sesso != 'f' || sesso != 'm' || sesso != 'a') 
+                    if (sesso != 'f' && sesso != 'm') 
                     {
                         Console.WriteLine("\nCarattere non valido.");
                         Console.WriteLine("Riprova:\n");
@@ -94,12 +94,12 @@ namespace ImposteApp
                     char conferma = Console.ReadKey().KeyChar;
                     if (conferma == 'n' || conferma == 'N')
                     {
-                        Console.WriteLine("\n Il menù verrà riavviato \n");
+                        Console.WriteLine("\n Il programma verrà riavviato \n");
                         NuovoContribuente = null;
                     }
                     else if (conferma == 'y' || conferma == 'Y')
                     {
-                        Console.WriteLine("\nAvviando il menù per il calcolo dell'imposta...\n");
+                        Console.WriteLine("\nCalcolo dell'imposta in corso...\n");
                         NuovoContribuente?.CalcolaImposta();
                     }
                 }
