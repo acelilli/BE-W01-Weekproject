@@ -19,8 +19,6 @@ namespace ImposteApp
         public double RedditoAnnuale { get; set; }
         private double Imposta {  get; set; }
 
-        // euro symbol:
-        char euro = '\u20AC';
 
         // Costruttore Contribuente:
         public Contribuente(string nome, string cognome, DateTime dataNascita, string codiceFiscale, char sesso, string comuneResidenza, double redditoAnnuale)
