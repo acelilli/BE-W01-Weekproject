@@ -43,7 +43,7 @@ namespace ImposteApp
         }
 
         // Calcolo imposta:
-        // dato RedditoAnnuale 
+        // switch su dato RedditoAnnuale 
         // ritorna un double (imposta)
         public double CalcolaImposta()
         {
@@ -76,6 +76,8 @@ namespace ImposteApp
             return Imposta;
         }
 
+        // Recap Imposta
+        // Al riepilogo aggiunge il nuovo dato imposta
         public void RecapImposta() {
             Console.WriteLine("================ CALCOLO IMPOSTA ============== \n");
             Riepilogo();

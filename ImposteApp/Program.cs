@@ -88,20 +88,18 @@ namespace ImposteApp
                     //
                     //------------------ RIEPILOGO E CONFERMA DEI DATI --------------------------------------
                     Console.WriteLine("================ RIEPILOGO DATI ==============\n");
-                    NuovoContribuente?.Riepilogo(); // mostra il riepilogo SOLO se NuovoContribuente non è null
+                    NuovoContribuente?.Riepilogo(); 
+                    // mostra il riepilogo SOLO se NuovoContribuente non è null
                     Console.WriteLine("Confermi i dati inseriti? (y/n)");
                     char conferma = Console.ReadKey().KeyChar;
                     if (conferma == 'n' || conferma == 'N')
                     {
                         Console.WriteLine("\n Il menù verrà riavviato \n");
                         NuovoContribuente = null;
-                        //checkConferma = false;
                     }
                     else if (conferma == 'y' || conferma == 'Y')
                     {
                         Console.WriteLine("\nAvviando il menù per il calcolo dell'imposta...\n");
-                        // checkConferma = true;
-                        // choice = 2; //nb.: anche forzando il valore di choice a 2 non entra nel blocco else if
                         NuovoContribuente?.CalcolaImposta();
                     }
                 }
@@ -110,7 +108,8 @@ namespace ImposteApp
                     Console.WriteLine("\nRiavvio del programma...\n");
                 }
 
-            } while (choice != 2); // Continua fino a quando la scelta non è "Esci" (5)
+            } while (choice != 2); 
+            // Continua fino a quando la scelta non è "Esci" (5)
         }
     }
 }
